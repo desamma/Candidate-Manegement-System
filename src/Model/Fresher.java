@@ -7,7 +7,7 @@ public class Fresher extends Candidate{
     private String Education;
 
     public Fresher(int Graduation_date, String Graduation_rank, String Education, Name name, int cDate, Contact contact, int cType) {
-        super(name, cDate, contact, cType);
+        super(name, contact, cType);
         this.Graduation_date = Graduation_date;
         this.Graduation_rank = Graduation_rank;
         this.Education = Education;

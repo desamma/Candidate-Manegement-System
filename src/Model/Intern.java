@@ -7,7 +7,7 @@ public class Intern extends Candidate{
     private String uniName;
 
     public Intern(String Major, String Semester, String uniName, Name name, int cDate, Contact contact, int cType) {
-        super(name, cDate, contact, cType);
+        super(name, contact, cType);
         this.Major = Major;
         this.Semester = Semester;
         this.uniName = uniName;

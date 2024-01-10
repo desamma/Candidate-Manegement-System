@@ -47,4 +47,30 @@ public class CandidateList {
     public void addEx(Intern candidate){
         inCan.add(candidate);
     }
+    
+    public ArrayList<Candidate> searchAll(String name, int cType){
+        ArrayList<Candidate> foundCandidate = new ArrayList<>();
+        
+        switch(cType){
+            case 0:
+                return searchInList(exCan, name);
+            case 1:
+                return searchInList(frCan, name);
+            case 2:
+                return searchInList(inCan, name);
+        }
+        return foundCandidate;
+    }
+    
+    public ArrayList<Candidate> searchInList(ArrayList<? extends Candidate> candidateList, String name){
+        ArrayList<Candidate> found = new ArrayList<>();
+        
+        for (Candidate c : candidateList){
+            String fullName = c.name.fName + " " + c.name.lName;
+            if(fullName.contains(name)) {
+                found.add(c);
+            };
+        }
+        return found;
+    }
 }
